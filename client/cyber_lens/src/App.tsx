@@ -7,29 +7,30 @@ import News from './pages/News';
 import './App.css';
 
 const Layout = () => {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </>
-  );
+    return (
+        <div>
+            <Navbar />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
+        </div>
+    );
 };
 
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/news" element={<News />} />
-        </Route>
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route element={<Layout />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/history" element={<History />} />
+                    <Route path="/news" element={<News />} />
+                </Route>
+            </Routes>
+        </Router>
+    );
 }
+
 
 export default App;
