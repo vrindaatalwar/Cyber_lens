@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS anonymous_clients (
+  id UUID PRIMARY KEY,
+  created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+  last_seen TIMESTAMP NOT NULL DEFAULT NOW()
+);
